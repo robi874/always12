@@ -4,6 +4,7 @@
 <meta property="og:description" content="Domain speaks for itself.">
 <meta property="og:url" content="https://www.loonawillalwaysbe12.com">
 <meta property="og:image" content="images/loonaot12.jpg">
+<meta content="" data-react-helmet="true" name="theme-color" id="metaColor">
 <title>LOONA OT12</title>
 <!-- <link rel="stylesheet" type ="text/css" href ="css/styles.css"> -->
 <meta charset="utf-8">
@@ -17,7 +18,31 @@
 <body>
 	<div class="container mt-4">
 		<p class="text-center fs-1">ot12</p>
+		<p id="test"></p>
 		<img src="images/loonaot12.jpg" class="img-fluid">
 	</div>
-</body> 
+	
+</body>
+<script>
+	const hexColors = [
+		"#ed028b",
+		"#fee502",
+		"#01a232",
+		"#fc9701",
+		"#fdc5c6",
+		"#d80110",
+		"#0701d3",
+		"#b901dd",
+		"#780202",
+		"#ffa97a",
+		"#01bea2",
+		"#020202",
+	]
+
+	function getRandomHexColor(){
+		let index = Math.floor(Math.random() * 12);
+		return hexColors[index];
+	}
+	$('#metaColor').attr("content", getRandomHexColor())
+</script> 
 </html>
